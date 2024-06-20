@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+:root {
+    --primary0: #ff5724; /* Dark */
+    --primary1: #ff744a;
+    --primary2: #ff8662;
+    --primary3: #fdad94;
+    --primary4: #ffd5c8; /* Light */
+    --hover: #ff3c00;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 10px;
+}
+
+/*define grid */
+.container {
+    min-height: 98vh;
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr 10px;
+    grid-template-rows: 40px 40px 1fr 35px;
+    grid-template-areas:
+        "nav nav nav nav"
+        "head head head head"
+        ". main main ."
+        "footer footer footer footer"
+;
+}
+/*nav hier opgenomen, binnen .container. 4 grid-rows */
+nav {
+    background-color: var(--primary0);
+    color: #fff;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    grid-area: nav;
+}
+.head {
+    background-color: var(--primary3);
+    padding: 10px;
+    grid-area: head;
+}
+
+.title {
+    background-color: var(--primary3);
+    padding: 0px;
+    grid-area: title;
+}
+
+.main-content {
+    background-color: var(--primary4);
+    padding: 20px;
+    grid-area: main;
+    height: 100%;
+}
+
+.aside-top {
+    background-color: #7AD6CC;
+    padding: 20px;
+    grid-area: aside-t;
+}
+
+.aside-bottom {
+    background-color: #7AD6CC;
+    padding: 20px;
+    grid-area: aside-b;
+}
+
+.footer {
+    background-color: var(--primary2);
+    padding: 20px;
+    grid-area: footer;
+}
+/* login scherm */
+/*
+#login {
+    display: flex;
+    height: 300px;
+    width: 500px;
+    background-color: var(--primary4);
+    border:red solid 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
+#login > * {
+    margin: auto
+}
+
+input[type=text], input[type=password]  {
+    width: 100px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+#login label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+#login input {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+input[type=submit] {
+    background-color: var(--primary0);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+input[type=submit]:hover {
+    background-color: var(--hover);
+}*/
+/*login-scherm */
+#login {
+    display: flex;
+    height: 300px;
+
+    }
+#login > * {
+    margin: auto;
+    background-color: var(--primary4);
+    border:red solid 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.frmlogin {
+    width: 500px;
+}
+.frmlogin label {
+    padding: 12px 5px 2px 0;
+    display: flex;
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+.frmlogin input {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+input[type=text], input[type=password]  {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+select {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: var(--primary0);
+    color: white;
+    width: 20%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: none;
+    position: relative;
+}
+input[type=submit]:hover {
+    background-color: var(--hover);
+}
+/* tabel opmaak */
+#customers {
+    border-collapse: collapse;
+    width: 100%;
+}
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: var(--hover);}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary0);
+    color: white;
+}
+
+#medewerkers {
+    border-collapse: collapse;
+    width: 100%;
+}
+#medewerkers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#medewerkers tr:nth-child(even){background-color: #f2f2f2;}
+
+#medewerkers tr:hover {background-color: var(--hover);}
+
+#medewerkers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary0);
+    color: white;
+}
+.main-content a {
+    padding-right: 10px;
+}
+.curPage {
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn-edit {
+   /*TODO: icons verzamelen... */
+    color: green;
+}
+.btn-delete {
+    /*TODO: icons verzamelen... */
+    color: red;
+}
+/*Idem als login form, maar nu voor detail-forms...*/
+#frmDetail > * {
+    margin: auto;
+    background-color: var(--primary4);
+    border:lightgray inset 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#frmDetail {
+    display: flex;
+    height: 300px;
+}
+.frmDetail {
+    width: 600px;
+}
+.frmDetail label {
+    padding: 12px 5px 2px 0;
+    display: flex;
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+.frmDetail input {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+.submitbtn {
+    width: 100%;
+    /*height: 300px;*/
+    /*border: 5px solid red;*/
+    display: flex;
+    justify-content: center;
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

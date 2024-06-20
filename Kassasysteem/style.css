@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.keyboard {
+    margin-top: 20px;
+}
+
+.key {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.key:hover {
+    background-color: #ccc;
+}
+
+#productCode {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.products-table {
+    margin-top: 20px;
+}
+
+.products-table input[type="number"] {
+    width: 60px;
+}
